@@ -1,0 +1,238 @@
+.heading-secondary {
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-left: 2rem;
+  text-align: left;
+  font-size: 2rem;
+  color: var(--color-4);
+  border-bottom: 2px solid var(--color-4);
+}
+.search {
+  background-color: var(--color-4);
+  padding: 3rem;
+  padding-bottom: 6rem;
+  // text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__input {
+    width: 40%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10rem;
+    transition: width 0.3s;
+    &:focus {
+      width: 50%;
+      // outline: 3px solid var(--color-2);
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(black, 0.1);
+    }
+  }
+  &__btn {
+    margin: 0.8rem auto;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    position: relative;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 0.5rem 2rem rgba(black, 0.2);
+      // &::after {
+      //   transform: scale(1.4);
+      //   opacity: 0;
+      // }
+    }
+    // &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.25rem 2rem rgba(black, 0.2);
+    }
+    // &::after {
+    //   content: '';
+    //   display: inline-block;
+
+    //   height: 100%;
+    //   width: 100%;
+    //   border-radius: 10rem;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: -1;
+    //   transition: all 0.4s;
+    // }
+  }
+}
+
+.recipe {
+  &__header {
+    display: flex;
+    margin: 2rem 5rem;
+    padding-bottom: 2rem;
+    border-bottom: 5px solid var(--color-4);
+
+    .img-container {
+      flex: 1;
+      padding-left: 2rem;
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        outline: 4px solid var(--color-4);
+        outline-offset: 4px;
+      }
+    }
+  }
+  &__title {
+    flex: 3;
+    align-self: flex-end;
+    padding: 0 3rem;
+    margin-bottom: -1rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--color-4);
+    transition: all 0.2s;
+
+    &:hover {
+      font-size: 4.5rem;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    width: 45%;
+    margin: 2rem auto;
+    background-color: var(--color-2);
+    border-radius: 5px;
+    box-shadow: 0 1rem 1rem rgba(black, 0.1);
+
+    &--featured {
+      // height: 10%;
+      width: 95%;
+      // display: block;
+    }
+    .img-container {
+      flex: 1;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+  }
+
+  &__details {
+    flex: 2;
+    padding: 2rem;
+    position: relative;
+
+    &--featured {
+      flex: 4;
+    }
+  }
+
+  &__details .link {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+  }
+
+  &__name {
+    margin: 0 0 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-4);
+  }
+
+  &__instructions {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-right: 5rem;
+      font-size: 1.2rem;
+      font-weight: 300;
+
+      strong {
+        display: block;
+        font-size: 1.4rem;
+        color: var(--color-4);
+      }
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: var(--color-2);
+  &--recipe {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    background-color: var(--color-1);
+    color: white;
+
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &--featured {
+    font-size: 1.5rem;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 1rem auto;
+  font-size: 1.7rem;
+
+  &__title {
+    flex: 1.5;
+    border-right: 3px solid var(--color-1);
+  }
+
+  &__info {
+    flex: 7;
+    padding-left: 2rem;
+  }
+  &__list {
+    list-style: none;
+    flex: 12;
+    &--left {
+      flex: 2;
+      padding-left: 2rem;
+    }
+    &--right {
+      flex: 4;
+    }
+  }
+
+  &__video {
+    padding: 2rem 0;
+  }
+}

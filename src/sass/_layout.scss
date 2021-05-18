@@ -1,0 +1,25 @@
+.header {
+  background-color: var(--color-4);
+  color: var(--color-2);
+  text-transform: uppercase;
+  &--primary {
+    height: 40vh;
+    padding: 6rem;
+    text-align: center;
+    font-size: 5rem;
+  }
+  &--secondary {
+    padding: 2rem 6rem;
+  }
+}
+.section-featured {
+  margin-top: -2rem;
+}
+.section-list {
+  margin-top: 4rem;
+}
+
+.section-details {
+  display: flex;
+  flex-direction: column;
+}
